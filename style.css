@@ -690,7 +690,7 @@ html {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   * {
     overflow: scroll;
   }
@@ -700,12 +700,33 @@ html {
   }
 
   .name-text {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .intro-text {
-    font-size: 3rem;
+    font-size: 2rem;
     overflow: hidden;
+  }
+
+  .neo-text {
+    font-size: 12px;
+  }
+
+  .about-text {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .blue-neo__text {
+    font-size: 12px;
+  }
+
+  .unordered-list {
+    display: list-item;
+  }
+
+  .list__item {
+    font-size: 12px;
   }
 
   .experience-box__text {
@@ -727,6 +748,8 @@ html {
 
   .project-box {
     overflow: hidden;
+    margin: 0;
+    margin-top: 0 !important;
   }
 
   .project-text {
@@ -739,10 +762,19 @@ html {
 
   .project-text-box__left {
     margin: 5px;
+    max-width: 100%;
+    height: auto;
   }
 
   .text__square__left {
     font-size: 10px;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .text__square {
+    margin-left: 0 !important;
   }
 
   .arrows {
@@ -751,6 +783,24 @@ html {
 
   .hide {
     text-align: center;
+  }
+
+  .project-image img {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .section__two {
+    margin-bottom: 4rem;
+  }
+
+  .section__four {
+    margin-bottom: 5rem;
+  }
+
+  .section__five {
+    margin-bottom: 3rem;
   }
 }
 
@@ -793,7 +843,7 @@ html {
   }
 
   .experience-box__buttons {
-    margin-bottom: 5rem;
+    margin-bottom: 2.5rem;
   }
 
   .experience-box__text {
@@ -801,8 +851,17 @@ html {
     width: 70%;
   }
 
+  .experience__list {
+    margin: 0;
+  }
+
+  .experience__list li {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
   .section__three {
-    margin-bottom: 10rem;
+    margin-bottom: 7rem;
   }
 
   .project-box {
@@ -832,6 +891,8 @@ html {
   }
 
   .project-image img {
-    max-width: -webkit-fill-available;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
   }
 }
