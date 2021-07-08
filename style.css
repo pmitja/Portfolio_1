@@ -8,6 +8,10 @@
   font-size: 1rem;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -759,10 +763,6 @@
   .section__one {
     height: 85vh;
     margin-bottom: 0;
-  }
-
-  .main-box {
-    margin: 0 0 0 4rem;
   }
 
   .icon-box {
