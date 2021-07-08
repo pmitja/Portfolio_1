@@ -814,6 +814,10 @@ html {
     overflow: hidden;
   }
 
+  .main-box {
+    margin: 0 1rem 0 5rem;
+  }
+
   .section__one {
     height: 85vh;
     margin-bottom: 0;
@@ -879,7 +883,7 @@ html {
   }
 
   .text__square {
-    margin-left: 70px;
+    margin: auto;
   }
 
   .project-image {
@@ -898,5 +902,9 @@ html {
     max-width: 100%;
     height: auto;
     margin: 0;
+  }
+
+  .section__four {
+    margin-bottom: 7rem;
   }
 }
