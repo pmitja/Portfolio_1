@@ -12,6 +12,12 @@ const contactBtn = document.querySelector('.nav__contact');
 const logoImg = document.querySelector('.logo');
 const imageOfMe = document.querySelector('.me');
 
+const anotherProject = document.querySelector('.hidden-project');
+const anotherAbout = document.querySelector('.hidden-about');
+const anotherExperience = document.querySelector('.hidden-experience');
+const anotherContact = document.querySelector('.hidden-contact');
+const logoBox = document.querySelector('.logo-box');
+
 const aboutSection = document.querySelector('.section__two');
 const allSections = document.querySelectorAll('.section');
 
@@ -21,10 +27,13 @@ const bankistTextSquare = document.querySelector('.bankist__square');
 const piggameTextSquare = document.querySelector('.piggame__square');
 const bankistLeftSquare = document.querySelector('.bankist__square-left');
 
+const arrowBox = document.querySelector('.arrows');
+const navMenu = document.querySelector('.nav-menu');
+const hiddenNavItems = document.querySelectorAll('.hidden-nav');
+
 projectImage.forEach(el => {
   el.addEventListener('mouseenter', function () {
     if (el.classList.contains('mapty') || el.classList.contains('bankistapp')) {
-      console.log('contains');
       maptyTextSquare.classList.add('move-right');
       bankistTextSquare.classList.add('move-right');
       this.addEventListener('mouseleave', () => {
@@ -163,14 +172,60 @@ contactBtn.addEventListener('click', function (e) {
   document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
 });
 
-logoImg.addEventListener('click', function (e) {
-  e.preventDefault();
+const hiddenBtn = function (btn) {
+  navMenu.classList.toggle('show-nav-menu');
+  arrowBox.classList.toggle('change');
+  const id = btn.getAttribute('href');
+  document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+};
+
+const homeSection = () => {
   const id = '#home-section';
   document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  navMenu.classList.toggle('show-nav-menu');
+};
+
+anotherAbout.addEventListener('click', function (e) {
+  e.preventDefault();
+  hiddenBtn(this);
+});
+
+anotherExperience.addEventListener('click', function (e) {
+  e.preventDefault();
+  hiddenBtn(this);
+});
+
+anotherProject.addEventListener('click', function (e) {
+  e.preventDefault();
+  hiddenBtn(this);
+});
+
+anotherContact.addEventListener('click', function (e) {
+  e.preventDefault();
+  hiddenBtn(this);
+});
+
+logoImg.addEventListener('click', function (e) {
+  e.preventDefault();
+  homeSection();
+});
+
+logoBox.addEventListener('click', function (e) {
+  e.preventDefault();
+  homeSection();
+});
+
+console.log(arrowBox);
+arrowBox.addEventListener('click', function () {
+  this.classList.toggle('change');
+  navMenu.classList.toggle('show-nav-menu');
+  arrowBox.style.zIndex = '115';
+  hiddenNavItems.forEach(el => {
+    el.classList.toggle('fade-in-animation');
+  });
 });
 
 const reavelSection = function (entries, observer) {
-  console.log(entries);
   const [entry] = entries;
   if (!entry.isIntersecting) return;
   entry.target.classList.remove('blur');
